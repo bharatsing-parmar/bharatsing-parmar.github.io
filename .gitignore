@@ -8,10 +8,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+dist
 dist-ssr
 *.local
-
-# Note: dist/ is NOT ignored - it's needed for GitHub Pages deployment
 
 # Editor directories and files
 .vscode/*
