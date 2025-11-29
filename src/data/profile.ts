@@ -20,7 +20,7 @@ const profile: ProfileData = {
   avatarUrl: '/profile.png',
   logoUrl: '/logo.png',
   showAvatarOnMobile: false,
-  heroTech: 'ASP.NET • C# • ASP.NET Core • TypeScript • React • Angular • Node.js',
+  heroTech: 'ASP.NET • C# • ASP.NET Core • TypeScript • React • Angular • Node.js • Azure • AWS',
   social: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/bharatsing-parmar/' },
     { label: 'GitHub', href: 'https://github.com/bharatsing-parmar' },
