@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-950 text-slate-200 antialiased;
+}
+
+.container-center {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 font-medium shadow-soft hover:bg-primary-dark transition;
+}
+
+.section-title {
+  @apply text-3xl font-semibold tracking-tight mb-6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 90px; /* Adjust based on your fixed header height */
+}
+
+.grid-ul {
+  list-style-type: circle; /* Sets the bullet style to a circle */
+  list-style-position: outside; /* Default, but explicitly stated for clarity */
+  padding-left: 2em; /* Adjust this value to control the overall indentation of the list */
+  /* You can also use margin-left if preferred, but padding-left is common for list indentation */
+}
+.grid-ul li {
+  margin-bottom: 0.5em; /* Space between list items */
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Reveal / on-scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px) scale(0.995);
+  transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal--visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Directional variations */
+.reveal[data-reveal='left'] { transform: translateX(-20px); }
+.reveal[data-reveal='right'] { transform: translateX(20px); }
+.reveal[data-reveal='zoom'] { transform: scale(.985) translateY(6px); }
+.reveal[data-reveal='fade'] { transform: none; opacity: 0; }
+.reveal[data-reveal='fade'].reveal--visible { opacity: 1; transform: none; }
+
+/* Small helper for staggered lists (use inline style: --reveal-delay: 120ms) */
