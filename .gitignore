@@ -11,6 +11,8 @@ node_modules
 dist-ssr
 *.local
 
+# Note: dist/ is NOT ignored - it's needed for GitHub Pages deployment
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
